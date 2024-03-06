@@ -17,12 +17,13 @@ export default function Products({ products }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   await mongooseConnect();
   const products = await Product.find({}, null, { sort: { _id: -1 } });
   return {
     props: {
       products: JSON.parse(JSON.stringify(products)),
     },
+    revalidate: 60,
   };
 }

@@ -20,10 +20,21 @@ export default function CategoryProducts({ products, category }) {
     </>
   );
 }
-
-export async function getServerSideProps(context) {
+export async function getStaticPaths() {
   await mongooseConnect();
-  const { id } = context.query;
+  const categories = await Category.find({});
+  const paths = categories.map((category) => ({
+    params: { id: category.name.toLowerCase() },
+  }));
+
+  return {
+    paths,
+    fallback: false, // or true if you want to enable incremental static regeneration (ISR)
+  };
+}
+export async function getStaticProps(context) {
+  await mongooseConnect();
+  const { id } = context.params;
   const products = await Product.find({});
   const categories = await Category.find({});
   const categoriesObj = JSON.parse(JSON.stringify(categories));
@@ -50,5 +61,6 @@ export async function getServerSideProps(context) {
       products: JSON.parse(JSON.stringify(foundedProducts)),
       category: currentCategory[0].name,
     },
+    revalidate: 60,
   };
 }

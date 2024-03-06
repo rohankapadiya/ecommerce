@@ -26,9 +26,9 @@ export default function Header() {
               <Link href={"/categories"} className={classes.navlinks}>
                 Categories
               </Link>
-              <Link href={"/account"} className={classes.navlinks}>
+              {/* <Link href={"/account"} className={classes.navlinks}>
                 Account
-              </Link>
+              </Link> */}
               <Link href={"/cart"} className={classes.navlinks}>
                 Cart ({cartProducts.length})
               </Link>

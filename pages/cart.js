@@ -23,7 +23,7 @@ export default function CartPage() {
   const [isEmpty, setIsEmpty] = useState(false);
   useEffect(() => {
     if (cartProducts.length > 0) {
-      axios.post("/api/cart", { ids: cartProducts }).then((res) => {
+      axios.post("./api/cart", { ids: cartProducts }).then((res) => {
         setProducts(res.data);
       });
     } else {
@@ -45,7 +45,7 @@ export default function CartPage() {
       setIsEmpty(true);
       return;
     }
-    const res = await axios.post("/api/checkout", {
+    const res = await axios.post("./api/checkout", {
       name,
       email,
       streetAddress,

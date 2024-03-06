@@ -34,14 +34,27 @@ export default function ProductPage({ product }) {
     </>
   );
 }
-
-export async function getServerSideProps(context) {
+export async function getStaticPaths() {
+  // Fetch the list of all product IDs
   await mongooseConnect();
-  const { id } = context.query;
+  const products = await Product.find({}, "_id");
+  const paths = products.map((product) => ({
+    params: { id: product._id.toString() },
+  }));
+
+  return {
+    paths,
+    fallback: false, // or true if you want to enable incremental static regeneration (ISR)
+  };
+}
+export async function getStaticProps(context) {
+  await mongooseConnect();
+  const { id } = context.params;
   const product = await Product.findById(id);
   return {
     props: {
       product: JSON.parse(JSON.stringify(product)),
     },
+    revalidate: 60,
   };
 }

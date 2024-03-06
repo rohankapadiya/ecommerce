@@ -22,12 +22,13 @@ export default function Categories({ categories }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   await mongooseConnect();
   const categories = await Category.find({});
   return {
     props: {
       categories: JSON.parse(JSON.stringify(categories)),
     },
+    revalidate: 60,
   };
 }
