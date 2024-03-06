@@ -1,0 +1,37 @@
+.table {
+  width: 100%;
+}
+.table th {
+  text-align: left;
+  text-transform: uppercase;
+  color: #ccc;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+.table td{
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.productInfo{
+    padding: 10px 0;
+    
+}
+
+.productInfo img {
+    max-width:90px;
+    max-height: 90px;
+}
+.productImageBox{
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,.1);
+    align-items: center;
+    justify-content: center;
+}
+.quantity{
+  padding: 0 3px;
+}

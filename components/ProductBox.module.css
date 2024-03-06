@@ -1,0 +1,35 @@
+.box {
+  background-color: #fff;
+  padding: 20px;
+  height: 120px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.h2 {
+  padding-top: 10px;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px;
+  align-items: center;
+}
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.addcart {
+  font-weight: bold;
+}

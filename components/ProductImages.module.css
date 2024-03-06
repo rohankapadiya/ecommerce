@@ -1,0 +1,38 @@
+.imageButtons {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 10px;
+  gap: 10px;
+}
+.imageButton {
+  border: 1px solid #ccc;
+  height: 60px;
+  padding: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.activeImage img {
+  max-height: 200px;
+  max-width: 100%;
+}
+.activeImage {
+  min-height: 200px;
+  text-align: center;
+}
+.active {
+  border: 1px solid #ccc;
+  height: 60px;
+  padding: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+  border-color: #ccc;
+}
+.notActive {
+  border: 1px solid #ccc;
+  height: 60px;
+  padding: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+  border-color: transparent;
+  opacity: 0.7;
+}

@@ -1,0 +1,56 @@
+.mainDiv {
+  background-color: #222;
+  color: #fff;
+  padding: 50px 0;
+}
+.text {
+  color: #aaa;
+  font-size: 0.8rem;
+  text-align: justify;
+}
+
+.wrapperdiv {
+  display: grid;
+  grid-template-columns: 0.93fr 1.07fr;
+}
+.image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 20% 100%;
+}
+.leftdiv {
+  padding: 20px 0;
+}
+.leftdiv h1 {
+  padding-bottom: 10px;
+}
+.buttons {
+  display: "flex";
+  gap: "5px";
+  margin: "10px 0px";
+}
+@media only screen and (max-width: 768px) {
+  .mainDiv {
+    padding: 0;
+  }
+  .wrapperdiv {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+  .image {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+  }
+  .leftdiv h1 {
+    text-align: center;
+  }
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+}

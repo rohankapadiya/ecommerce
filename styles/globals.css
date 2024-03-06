@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Poppins&family=Roboto&display=swap");
+* {
+  margin: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f0f0;
+}
+svg{
+  height: 20px;
+}

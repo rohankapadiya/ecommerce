@@ -1,0 +1,14 @@
+.box {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 2rem;
+  box-shadow: rgba(85, 66, 246, 0.1) 5px 5px, rgba(85, 66, 246, 0.05) 10px 10px;
+}

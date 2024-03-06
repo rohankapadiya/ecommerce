@@ -1,0 +1,36 @@
+.colWrapper {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  margin-top: 50px;
+  gap: 40px;
+}
+.colWrapper img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.box {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+}
+.priceSection {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+}
+.description {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+@media only screen and (max-width: 768px) {
+  .colWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+}
