@@ -47,7 +47,7 @@
     z-index: 3;
   }
   .navbarDesktop {
-    visibility: hidden;
+    display: none;
   }
   .navbar {
     display: flex;
